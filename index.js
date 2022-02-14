@@ -9,8 +9,10 @@ const menuList = document.querySelectorAll('.header-links');
 import { handleNavigation } from "./modules/nav.js";
 
 // Setting the date
+import { DateTime } from "luxon";
+
 const d = new Date();
-newDate.innerHTML = d.toUTCString();
+newDate.innerHTML = dt.toLocaleString(DateTime.DATETIME_MED);
 
 menuList.forEach((element, index) => {
   element.addEventListener('click', () => {
@@ -30,7 +32,7 @@ let listBooks = [];
 
 import { generateHTML } from "./modules/books.js";
 import { ReplaceBooks } from "./modules/books.js";
-const book2 = new ReplaceBooks();
+
 
 // Data is preserved in localStorage
 window.onload = function storeData() {

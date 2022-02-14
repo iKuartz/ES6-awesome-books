@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/iKuartz/ES6-awesome-books/issues"
   },
-  "homepage": "https://github.com/iKuartz/ES6-awesome-books#readme"
+  "homepage": "https://github.com/iKuartz/ES6-awesome-books#readme",
+  "dependencies": {
+    "luxon": "^2.3.0"
+  }
 }

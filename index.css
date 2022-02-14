@@ -1,0 +1,160 @@
+body {
+  font-family: "Comic Sans MS", sans-serif;
+  text-align: center;
+  margin: 2%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  border: solid 2px black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar > h2 {
+  margin: auto 0 auto 2%;
+}
+
+.menu-list {
+  list-style-type: none;
+  display: flex;
+  padding-right: 2%;
+}
+
+.menu-list > li {
+  padding-right: 20px;
+  padding-left: 20px;
+  border-right: solid 2px black;
+  word-break: keep-all;
+}
+
+.specific-info > li {
+  text-align: start;
+  padding-bottom: 5px;
+}
+
+.menu-list > li:last-child {
+  border: none;
+  padding-right: 0;
+}
+
+.list > a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover,
+a:active,
+a:visited,
+a:disabled {
+  color: blue;
+}
+
+.actual-date {
+  text-align: right;
+}
+
+.date {
+  margin: 0;
+}
+
+#bookshelf {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#booklist {
+  display: flex;
+  flex-direction: column;
+  border: solid black 2px;
+  width: 50%;
+  margin: auto;
+  max-height: 80vh;
+}
+
+#booklist > div {
+  display: flex;
+  width: 90%;
+  padding: 2% 5%;
+}
+
+#booklist > div > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#booklist > div:nth-child(odd) {
+  background-color: lightgrey;
+}
+
+#booklist div button {
+  margin-left: auto;
+  padding: 0 0.5rem;
+  height: 2.2rem;
+}
+
+footer {
+  border: solid 2px black;
+  text-align: left;
+  padding-left: 2%;
+  position: absolute;
+  clear: both;
+  bottom: 2%;
+  width: 94%;
+}
+
+#add-book {
+  margin: 3% auto;
+  max-height: 80vh;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+#add-book > input {
+  padding: 12px 5px;
+  width: 80%;
+}
+
+#add-book > h2 {
+  margin-bottom: 10%;
+}
+
+#input-title {
+  margin-bottom: 16px;
+}
+
+#input-author {
+  margin-bottom: 6px;
+}
+
+#input-add {
+  padding: 12px 4%;
+  width: auto;
+  align-self: flex-end;
+  margin: 12px 9% auto auto;
+}
+
+#contact-info {
+  max-width: 80%;
+  text-align: start;
+  margin: 3% auto;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-info > h2 {
+  margin-bottom: 5%;
+}
+
+#contact-info > p {
+  padding-bottom: 1.5%;
+}

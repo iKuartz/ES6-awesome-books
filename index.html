@@ -8,7 +8,46 @@
     <link rel="stylesheet" href="./index.css">
     <title>Document</title>
 </head>
-<body>
-    
-</body>
+    <body>
+        <header>
+            <nav class="navbar">
+                <h2>Awesome Books</h2>
+                <ul class="menu-list">
+                    <li class="list"><a href="#bookshelf" class="header-links">List</a></li>
+                    <li class="list"><a href="#add-book" class="header-links">Add new</a></li>
+                    <li class="list last"><a href="#contact-info" class="header-links">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="actual-date">
+            <h6 class="date">Here is the date</h6>
+        </section>
+        <section id="bookshelf">
+            <h1 class="booklist-h1">All awesome books</h1>
+            <div id="booklist">
+            </div>
+        </section>
+        <section id="add-book">
+            <h2>Add a new book</h2>
+            <input id="input-title" type="text" name="Title" placeholder="Title"> <br>
+            <input id="input-author" type="text" name="Author" placeholder="Author">
+            <br>
+            <button type="submit" id="input-add">Add</button>
+            <!-- Remember to remove the br and style on css -->
+        </section>
+        <section id="contact-info">
+            <h2>Contact Information</h2>
+            <p class="info">
+                Do have any questions or you just want to say 'Hello'?
+            </p>
+            <ul class="specific-info">
+                <li class="this-info">Our e-mail: mail@mail.com</li>
+                <li class="this-info">Our phone number: 0043586534422</li>
+                <li class="this-info">Our address: Streetname 22, 84503 City, Country</li>
+            </ul>
+        </section>
+        <footer class="the-footer">
+            <p class="footer-info">Copyright</p>
+        </footer>
+    </body>
 </html>

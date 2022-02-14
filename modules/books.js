@@ -1,24 +1,3 @@
-// Navigation
-const bookshelf = document.getElementById('bookshelf');
-const addBook = document.getElementById('add-book');
-const contactInfo = document.getElementById('contact-info');
-const newDate = document.querySelector('.date');
-
-const menuList = document.querySelectorAll('.header-links');
-
-import { handleNavigation } from "./modules/nav.js";
-
-// Setting the date
-const d = new Date();
-newDate.innerHTML = d.toUTCString();
-
-menuList.forEach((element, index) => {
-  element.addEventListener('click', () => {
-    handleNavigation(index);
-  });
-});
-
-// Booklist
 // Collecting information from inputs
 const inputTitle = document.querySelector('#input-title');
 const inputAuthor = document.querySelector('#input-author');
@@ -28,8 +7,57 @@ const booksSection = document.querySelector('#booklist');
 // Create a collection that keeps a list of books (hint: you can use an array of objects for that).
 let listBooks = [];
 
-import { generateHTML } from "./modules/books.js";
-import { ReplaceBooks } from "./modules/books.js";
+export function generateHTML(details) {
+  const template = `
+  <div id="book${details.id}">
+      <p id="book${details.id}-details">${details.title} by ${details.author}</p>
+      <button id="book${details.id}-remove" class='remove-book'>Remove</button>
+  </div>
+`;
+  return template;
+}
+
+export class ReplaceBooks {
+  replacebooks(title, author, id) {
+    this.title = title;
+    this.author = author;
+    this.id = id;
+  }
+
+  generateContent(details) {
+    const template = `
+    <div id="book${details.id}">
+        <p id="book${details.id}-details">${details.title} by ${details.author}</p>
+        <button id="book${details.id}-remove" data-id='${this.id}' class='remove-book'>Remove</button>
+    </div>
+    `;
+    return template;
+  }
+
+  addBook() {
+    booksSection.innerHTML = '';
+    listBooks.forEach((book) => {
+      const HTMLElement = document.createElement('div');
+      HTMLElement.innerHTML = this.generateContent(book);
+      booksSection.appendChild(HTMLElement);
+    });
+    // Updating local storage for books
+    localStorage.setItem('listBooks', JSON.stringify(listBooks));
+  }
+
+  deleteBook(trydeleteBook) {
+    listBooks = listBooks.filter((book) => book.id !== trydeleteBook);
+    booksSection.innerHTML = '';
+    listBooks.forEach((book) => {
+      const HTMLElement = document.createElement('div');
+      HTMLElement.innerHTML = this.generateContent(book);
+      booksSection.appendChild(HTMLElement);
+    });
+    // Updating local storage for books
+    localStorage.setItem('listBooks', JSON.stringify(listBooks));
+  }
+}
+
 const book2 = new ReplaceBooks();
 
 // Data is preserved in localStorage

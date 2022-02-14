@@ -105,7 +105,7 @@ Basic UI
 
 ## Live Demo
 
-[Live Demo Link](https://ikuartz.github.io/awesome-books)
+[Live Demo Link](https://ikuartz.github.io/ES6-awesome-books/)
 
 ## Author
 

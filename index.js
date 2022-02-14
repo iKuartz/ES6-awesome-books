@@ -7,7 +7,7 @@ const newDate = document.querySelector('.date');
 const menuList = document.querySelectorAll('.header-links');
 
 // Setting the date
-import { DateTime } from "/node_modules/luxon/src/luxon.js";
+import { DateTime } from "./node_modules/luxon/src/luxon.js";
 const d = new Date();
 newDate.innerHTML = dt.toLocaleString(DateTime.DATETIME_MED);
 

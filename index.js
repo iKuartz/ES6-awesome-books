@@ -6,13 +6,12 @@ const newDate = document.querySelector('.date');
 
 const menuList = document.querySelectorAll('.header-links');
 
-import { handleNavigation } from "./modules/nav.js";
-
 // Setting the date
-import { DateTime } from "luxon";
-
+import { DateTime } from "./node_modules/luxon/src/luxon.js";
 const d = new Date();
 newDate.innerHTML = dt.toLocaleString(DateTime.DATETIME_MED);
+
+import { handleNavigation } from "./modules/nav.js";
 
 menuList.forEach((element, index) => {
   element.addEventListener('click', () => {
@@ -32,7 +31,6 @@ let listBooks = [];
 
 import { generateHTML } from "./modules/books.js";
 import { ReplaceBooks } from "./modules/books.js";
-
 
 // Data is preserved in localStorage
 window.onload = function storeData() {

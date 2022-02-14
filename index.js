@@ -1,7 +1,5 @@
 // Navigation
-const bookshelf = document.getElementById('bookshelf');
-const addBook = document.getElementById('add-book');
-const contactInfo = document.getElementById('contact-info');
+
 const newDate = document.querySelector('.date');
 
 const menuList = document.querySelectorAll('.header-links');
@@ -9,9 +7,9 @@ const menuList = document.querySelectorAll('.header-links');
 // Setting the date
 import { DateTime } from "./node_modules/luxon/src/luxon.js";
 const d = new Date();
-newDate.innerHTML = dt.toLocaleString(DateTime.DATETIME_MED);
+newDate.innerHTML = d.toLocaleString(DateTime.DATETIME_MED);
 
-import { handleNavigation } from "./modules/nav.js";
+import handleNavigation from "./modules/nav.js";
 
 menuList.forEach((element, index) => {
   element.addEventListener('click', () => {
@@ -31,6 +29,8 @@ let listBooks = [];
 
 import { generateHTML } from "./modules/books.js";
 import { ReplaceBooks } from "./modules/books.js";
+
+const book2 = new ReplaceBooks();
 
 // Data is preserved in localStorage
 window.onload = function storeData() {

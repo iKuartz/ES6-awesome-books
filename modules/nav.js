@@ -9,7 +9,7 @@ const menuList = document.querySelectorAll('.header-links');
 const d = new Date();
 newDate.innerHTML = d.toUTCString();
 
-export function handleNavigation(index) {
+export default function handleNavigation(index) {
   if (menuList[index].innerHTML === 'List') {
     bookshelf.style.display = 'flex';
     addBook.style.display = 'none';

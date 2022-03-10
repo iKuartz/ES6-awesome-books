@@ -2,7 +2,7 @@
 
 # Awesome Books
 
-> Solo programming project for week seven of the Microverse Program.
+> Solo programming project for week 2 of the Javascript Module of the Microverse Program.
 
 ![Desktop Version](./images/desktop_version.png)
 ![Mobile Version](./images/mobile.png)
